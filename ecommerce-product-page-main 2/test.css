@@ -1,0 +1,16 @@
+.ma-liste li {
+    position: relative;
+    padding-bottom: 10px;
+    /* hauteur du trait */
+    background-image: linear-gradient(to right, #000 0%, #000 50%, #fff 50%, #fff 100%);
+    background-size: 200% 100%;
+    /* largeur du dégradé */
+    background-position: bottom;
+    /* position du dégradé */
+    transition: background-position 0.3s ease-in-out;
+}
+
+.ma-liste li:hover {
+    background-position: top;
+    /* position du dégradé au survol */
+}

@@ -1,4 +1,97 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Kumbh Sans;
+}
+
+header {
+  display: flex;
+  margin-left: 12rem;
+  margin-top: 2rem;
+}
+
+h1 {
+  margin-top: 1.3rem;
+}
+
+.navbar {
+  margin-top: 1rem;
+  margin-left: 3rem;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+ul li {
+  margin-left: 2rem;
+}
+
+.navbar li {
+  position: relative;
+  padding-right: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: black;
+}
+
+.navbar li::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: -15px;
+  height: 1px;
+  width: 220%;
+  background-color: lightgray;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar li:hover::after {
+  background-color: hsl(26deg, 100%, 55%);
+  height: 3px;
+}
+
+.panier {
+  margin-left: 50rem;
+  margin-top: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.profil {
+  margin-left: 3rem;
+}
+.profil:hover {
+  border: 3px solid hsl(26deg, 100%, 55%);
+  border-radius: 50%;
+  height: 6.25rem;
+  width: 6.25rem;
+}
+
+.shop {
+  border: none;
+  background: none;
+}
+
+.modal {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-wrapper {
+  background-color: #fff;
+  width: 600px;
+  max-width: calc(100vw - 20px);
+  max-height: calc(100vh - 20px);
+  overflow: auto;
+  padding: 20px;
 }/*# sourceMappingURL=style.css.map */
