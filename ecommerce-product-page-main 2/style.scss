@@ -14,6 +14,16 @@ h1 {
 .navbar {
   margin-top: 1rem;
   margin-left: 3rem;
+  position: relative;
+  height: fit-content;
+}
+.navbar::after {
+  border-bottom: 2px solid lightgray;
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: -60px;
+  left: 0;
 }
 ul {
   display: flex;
@@ -37,17 +47,18 @@ a {
 .navbar li::after {
   content: "";
   position: absolute;
-  bottom: -60px;
-  left: -15px;
+  bottom: -67px;
+  left: 0;
   height: 1px;
-  width: 220%;
-  background-color: lightgray;
+  width: 100%;
+
   transition: background-color 0.3s ease-in-out;
 }
 
 .navbar li:hover::after {
   background-color: hsl(26, 100%, 55%);
   height: 3px;
+  left: -5px;
 }
 
 .panier {
