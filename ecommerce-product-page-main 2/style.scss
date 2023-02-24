@@ -5,7 +5,7 @@ body {
 }
 header {
   display: flex;
-  margin-left: 12rem;
+  margin-left: 15rem;
   margin-top: 2rem;
 }
 h1 {
@@ -13,7 +13,7 @@ h1 {
 }
 .navbar {
   margin-top: 1rem;
-  margin-left: 3rem;
+  margin-left: 2rem;
   position: relative;
   height: fit-content;
 }
@@ -62,13 +62,13 @@ a {
 }
 
 .panier {
-  margin-left: 50rem;
+  margin-left: 20rem;
   margin-top: 30px;
   height: 30px;
   width: 30px;
 }
 .profil {
-  margin-left: 3rem;
+  margin-left: 5rem;
   &:hover {
     border: 3px solid hsl(26, 100%, 55%);
     border-radius: 50%;
@@ -80,19 +80,152 @@ a {
   border: none;
   background: none;
 }
-//modal
-.modal {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Style pour le bouton */
+#ouvrirModal {
+  background-color: white; /* Couleur de fond */
+  border: none;
 }
-.modal-wrapper {
-  background-color: #fff;
-  width: 600px;
-  max-width: calc(100vw - 20px);
-  max-height: calc(100vh - 20px);
-  overflow: auto;
+
+/* Style pour le modal */
+.modal {
+  display: none; /* Cache le modal par défaut */
+  position: fixed; /* Position fixe */
+  z-index: 1; /* Place le modal au-dessus de tout */
+  left: 30%;
+  top: -10%;
+  width: 100%;
+  height: 100%;
+  /* Couleur de fond semi-transparente */
+}
+.titre {
+  border-bottom: 1px solid lightgray;
+  padding: 30px;
+}
+.text {
+  padding-top: 80px;
+}
+/* Style pour le contenu du modal */
+.modal-contenu {
+  background-color: #fefefe; /* Couleur de fond */
+  margin: 15% auto; /* Centre le contenu verticalement et horizontalement */
   padding: 20px;
+  width: 30%; /* Largeur du contenu */
+  height: 40%;
+  text-align: center;
+  border-radius: 3%;
+  box-shadow: 0px 0px 19px -1px rgba(92, 92, 92, 0.67);
+}
+
+/* Style pour le span "fermer" */
+.fermer {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.fermer:hover,
+.fermer:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+//contenu
+
+main {
+  display: flex;
+}
+
+aside > img {
+  width: 400px;
+  height: 400px;
+  border-radius: 3%;
+  margin-left: 200px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+div.lowPhoto {
+  margin-left: 192px;
+  img {
+    border-radius: 5%;
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+  }
+}
+// coté droit
+
+.right {
+  margin-top: 120px;
+  margin-left: 100px;
+  & h2 {
+    font-weight: bold;
+    font-size: 2.5em;
+  }
+}
+.orange {
+  color: hsl(26, 100%, 55%);
+  font-size: 1.3em;
+}
+.price {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.reduction {
+  background-color: hsla(26, 100%, 55%, 0.349);
+  color: hsl(26, 100%, 55%);
+  padding: 1%;
+  border-radius: 10%;
+  font-size: 0.8em;
+  margin-left: 10px;
+}
+.fallPrice {
+  color: rgb(161, 160, 160);
+}
+.add {
+  background-color: rgba(211, 211, 211, 0.324);
+  width: 30%;
+  text-align: center;
+  font-size: 1.5em;
+  border-radius: 5px 5px 5px 5px;
+  height: 60px;
+  padding-bottom: 0;
+  border: none;
+}
+.addButton {
+  display: flex;
+}
+.negatif {
+  color: hsl(26, 100%, 55%);
+  padding-right: 30px;
+  font-size: 1.5em;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.positif {
+  color: hsl(26, 100%, 55%);
+  padding-left: 30px;
+  font-size: 1.2em;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.cartAdd {
+  background-color: hsl(26, 100%, 55%);
+  height: 60px;
+  color: white;
+  padding: auto;
+  border-radius: 5px 5px 5px 5px;
+  padding: 0;
+  font-size: 1.1em;
+  margin-left: 40px;
+  padding-left: 80px;
+  padding-right: 80px;
+  cursor: pointer;
+  border: none;
+  & svg {
+    margin-right: 15px;
+  }
 }
