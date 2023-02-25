@@ -201,6 +201,10 @@ div.lowPhoto img {
   color: rgb(161, 160, 160);
 }
 
+.addButton {
+  display: flex;
+}
+
 .add {
   background-color: rgba(211, 211, 211, 0.324);
   width: 30%;
@@ -208,33 +212,35 @@ div.lowPhoto img {
   font-size: 1.5em;
   border-radius: 5px 5px 5px 5px;
   height: 60px;
-  padding-bottom: 0;
   border: none;
-}
-
-.addButton {
-  display: flex;
+  vertical-align: middle;
+  padding: 10px;
 }
 
 .negatif {
   color: hsl(26deg, 100%, 55%);
-  padding-right: 30px;
-  font-size: 1.5em;
+  position: relative;
+  right: 130px;
+  font-size: 2.7em;
   border: none;
   background-color: transparent;
   cursor: pointer;
+  top: -11px;
 }
 
 .positif {
   color: hsl(26deg, 100%, 55%);
-  padding-left: 30px;
-  font-size: 1.2em;
+  position: relative;
+  right: 65px;
+  top: -10px;
+  padding-left: 0;
+  font-size: 1.8em;
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
 
-.cartAdd {
+#add-to-cart {
   background-color: hsl(26deg, 100%, 55%);
   height: 60px;
   color: white;
@@ -242,12 +248,12 @@ div.lowPhoto img {
   border-radius: 5px 5px 5px 5px;
   padding: 0;
   font-size: 1.1em;
-  margin-left: 40px;
+  margin-left: 20px;
   padding-left: 80px;
   padding-right: 80px;
   cursor: pointer;
   border: none;
 }
-.cartAdd svg {
+#add-to-cart svg {
   margin-right: 15px;
 }/*# sourceMappingURL=style.css.map */
