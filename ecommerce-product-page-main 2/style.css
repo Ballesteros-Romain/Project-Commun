@@ -65,14 +65,13 @@ a:hover {
 }
 
 .navbar li:hover::after {
-  background-color: hsl(26deg, 100%, 55%);
+  background-color: hsl(26, 100%, 55%);
   height: 3px;
   left: -5px;
 }
 
 .panier {
   margin-left: 20rem;
-  margin-top: 30px;
   height: 30px;
   width: 30px;
 }
@@ -81,7 +80,7 @@ a:hover {
   margin-left: 5rem;
 }
 .profil:hover {
-  border: 3px solid hsl(26deg, 100%, 55%);
+  border: 3px solid hsl(26, 100%, 55%);
   border-radius: 50%;
   height: 6.25rem;
   width: 6.25rem;
@@ -179,7 +178,7 @@ div.lowPhoto img {
 }
 
 .orange {
-  color: hsl(26deg, 100%, 55%);
+  color: hsl(26, 100%, 55%);
   font-size: 1.3em;
 }
 
@@ -189,8 +188,8 @@ div.lowPhoto img {
 }
 
 .reduction {
-  background-color: hsla(26deg, 100%, 55%, 0.349);
-  color: hsl(26deg, 100%, 55%);
+  background-color: hsla(26, 100%, 55%, 0.349);
+  color: hsl(26, 100%, 55%);
   padding: 1%;
   border-radius: 10%;
   font-size: 0.8em;
@@ -199,6 +198,7 @@ div.lowPhoto img {
 
 .fallPrice {
   color: rgb(161, 160, 160);
+  text-decoration: line-through;
 }
 
 .addButton {
@@ -218,7 +218,7 @@ div.lowPhoto img {
 }
 
 .negatif {
-  color: hsl(26deg, 100%, 55%);
+  color: hsl(26, 100%, 55%);
   position: relative;
   right: 130px;
   font-size: 2.7em;
@@ -229,7 +229,7 @@ div.lowPhoto img {
 }
 
 .positif {
-  color: hsl(26deg, 100%, 55%);
+  color: hsl(26, 100%, 55%);
   position: relative;
   right: 65px;
   top: -10px;
@@ -241,7 +241,7 @@ div.lowPhoto img {
 }
 
 #add-to-cart {
-  background-color: hsl(26deg, 100%, 55%);
+  background-color: hsl(26, 100%, 55%);
   height: 60px;
   color: white;
   padding: auto;
@@ -256,4 +256,15 @@ div.lowPhoto img {
 }
 #add-to-cart svg {
   margin-right: 15px;
+}
+
+.resultCart {
+  position: relative;
+  left: 10rem;
+  bottom: 2.6rem;
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 1% 2%;
 }/*# sourceMappingURL=style.css.map */

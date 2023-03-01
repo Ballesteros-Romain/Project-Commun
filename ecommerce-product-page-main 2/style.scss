@@ -63,7 +63,7 @@ a {
 
 .panier {
   margin-left: 20rem;
-  margin-top: 30px;
+  //margin-top: 30px;
   height: 30px;
   width: 30px;
 }
@@ -182,6 +182,7 @@ div.lowPhoto {
 }
 .fallPrice {
   color: rgb(161, 160, 160);
+  text-decoration: line-through;
 }
 //button + et -
 .addButton {
@@ -236,4 +237,14 @@ div.lowPhoto {
   & svg {
     margin-right: 15px;
   }
+}
+.resultCart {
+  position: relative;
+  left: 10rem;
+  bottom: 2.6rem;
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 1% 2%;
 }

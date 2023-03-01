@@ -54,6 +54,7 @@ function addToCart() {
 
   // Créer un nouvel élément HTML pour afficher le chiffre dans le panier
   const numberElement = document.createElement("span");
+  numberElement.className = "resultCart";
   numberElement.textContent = count;
 
   // Ajouter le chiffre à l'élément "js-modal"
