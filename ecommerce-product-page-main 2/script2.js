@@ -27,7 +27,6 @@ $(function () {
   };
 
   // Ferme le modal lorsque l'utilisateur clique en dehors du modal
-
   window.onclick = function (event) {
     if (event.target == modal) {
       modal.style.display = "none";
@@ -43,7 +42,7 @@ $(function () {
   const modalElement = document.querySelector(".js-modal");
   const emptyCart = document.getElementById("emptyId");
 
-  // Définir une variable pour compter le nombre de clics
+  // Définir une variable pour compter le nombre de produits
   let count = 1;
 
   // Fonction pour incrémenter le compteur
@@ -55,34 +54,31 @@ $(function () {
   // Fonction pour décrémenter le compteur
   function decrement() {
     count--;
-    counter.textContent = count;
     if (count < 1) {
       count = 1;
     }
+    counter.textContent = count;
   }
+
   let countSum = 0;
+
   // Fonction pour ajouter le compteur au panier
   function addToCart() {
     countSum += count;
-    const cart = []; // un tableau vide pour stocker les valeurs du panier
-    cart.push(count); // ajouter la valeur de count au panier
 
     // Créer un nouvel élément HTML pour afficher le chiffre dans le panier
-    const numberElement = document.createElement("span");
-    numberElement.className = "resultCart";
+    const numberElement = document.querySelector(".resultCart");
     numberElement.textContent = countSum;
 
-    // Ajouter le chiffre à l'élément "js-modal"
-    modalElement.appendChild(numberElement);
-    const previousNumberElement = document.querySelector(".resultCart");
-    if (previousNumberElement) {
-      modalElement.replaceChild(numberElement, previousNumberElement);
+    if (countSum > 0) {
+      modalContentFull.style.display = "block";
+      textEmpty.style.display = "none";
     } else {
-      modalElement.appendChild(numberElement);
+      modalContentFull.style.display = "none";
+      textEmpty.style.display = "block";
     }
-
-    // console.log(cart); // afficher le contenu du panier dans la console
   }
+
   // Ajouter des écouteurs d'événements pour les clics sur les boutons
   plusBtn.addEventListener("click", increment);
   minusBtn.addEventListener("click", decrement);
@@ -93,18 +89,23 @@ $(function () {
   function emptys() {
     const numberElement = document.querySelector(".resultCart");
     if (numberElement) {
-      numberElement.parentNode.removeChild(numberElement);
+      // numberElement.parentNode.removeChild(numberElement);
+      numberElement.innerHTML = "0";
       countSum = 0;
+      numberElement.style.display = "inline";
+      modalContentFull.style.display = "none";
+      textEmpty.style.display = "block";
     }
   }
 
-  emptyCart.addEventListener("click", emptys);
   //------------- Contenu modal quand panier remplis----------------
-
+  const textEmpty = document.querySelector(".text");
   const modalContentFull = document.querySelector("#modalContentFull");
   if (countSum > 0) {
     modalContentFull.style.display = "block";
+    textEmpty.style.display = "none";
   } else {
     modalContentFull.style.display = "none";
+    textEmpty.style.display = "block";
   }
 });

@@ -116,7 +116,7 @@ a:hover {
 }
 
 .text {
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 /* Style pour le contenu du modal */
@@ -129,6 +129,7 @@ a:hover {
   text-align: center;
   border-radius: 3%;
   box-shadow: 0px 0px 19px -1px rgba(92, 92, 92, 0.67);
+  position: relative;
 }
 
 /* Style pour le span "fermer" */
@@ -281,18 +282,18 @@ div.lowPhoto img {
 }
 
 .empty {
-  position: relative;
-  bottom: -20px;
-  right: 130px;
+  position: absolute;
+  bottom: 25px;
+  left: 30px;
   background-color: rgb(255, 255, 255);
   border: none;
   scale: 1.5;
 }
 
 .valid {
-  position: relative;
-  bottom: -20px;
-  left: 130px;
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
   background-color: hsl(26, 100%, 55%);
   border: hsl(26, 100%, 55%);
 }
@@ -346,4 +347,24 @@ div.lowPhoto img {
 
 .carousel-inner {
   border-radius: 3%;
+}
+
+#modalContentFull {
+  display: flex;
+  margin-left: 20px;
+}
+#modalContentFull img {
+  height: 80px;
+  width: 80px;
+  border-radius: 5px;
+  position: absolute;
+  top: 150px;
+  left: 50px;
+}
+#modalContentFull .textModalFull {
+  position: absolute;
+  top: 160px;
+  left: 140px;
+  text-align: start;
+  margin-left: 20px;
 }/*# sourceMappingURL=style.css.map */
