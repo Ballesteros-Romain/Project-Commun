@@ -67,12 +67,18 @@ $(function () {
     countSum += count;
 
     // Créer un nouvel élément HTML pour afficher le chiffre dans le panier
+    const resultCartModal = document.querySelector(".resultCartModal");
     const numberElement = document.querySelector(".resultCart");
     numberElement.textContent = countSum;
+
+    const sumElement = document.querySelector(".sumElement");
+
+    sumElement.textContent = "  $  " + 125 * countSum + ".00";
 
     if (countSum > 0) {
       modalContentFull.style.display = "block";
       textEmpty.style.display = "none";
+      resultCartModal.textContent = " x " + countSum;
     } else {
       modalContentFull.style.display = "none";
       textEmpty.style.display = "block";
@@ -108,4 +114,6 @@ $(function () {
     modalContentFull.style.display = "none";
     textEmpty.style.display = "block";
   }
+
+  //------------------------------------------ page 2------------------------------------------------------------
 });
