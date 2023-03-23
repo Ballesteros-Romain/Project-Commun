@@ -290,12 +290,13 @@ div.lowPhoto {
 // ================================ slide =======================================//
 
 #monSlide {
-  position: absolute;
-  left: 400px;
-  top: 100px;
+  //position: absolute;
+  //left: 600px;
+  //top: 100px;
   background-color: rgba(0, 0, 0, 0.666);
   z-index: 3;
   border-radius: 3%;
+  width: 600px;
 }
 .carousel-item {
   height: 600px;
@@ -303,7 +304,7 @@ div.lowPhoto {
 }
 .modal2 {
   display: none; /* Cache le modal par défaut */
-  position: fixed; /* Position fixe */
+  // position: fixed; /* Position fixe */
   position: relative;
   top: -760px;
   background-color: rgba(0, 0, 0, 0.9);
@@ -311,8 +312,18 @@ div.lowPhoto {
   width: 100vw;
   z-index: 3;
 }
+.modal2-contenu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 // span fermer2
 .fermerTwo {
+  position: absolute;
+  top: 30px;
+  right: 40px;
   color: white;
   float: right;
   font-size: 45px;
@@ -335,6 +346,7 @@ div.lowPhoto {
 // Intérieur du modal photo
 .carousel-inner {
   border-radius: 3%;
+  overflow: hidden;
 }
 #modalContentFull {
   display: flex;
