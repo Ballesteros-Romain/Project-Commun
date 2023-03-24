@@ -152,21 +152,22 @@ aside > button > img {
   margin-top: 100px;
   margin-bottom: 20px;
 }
-div.lowPhoto {
-  margin-left: 192px;
-  img {
+.lowPhoto {
+  margin-left: 207px;
+  & a img {
     border-radius: 12%;
-    height: 80px;
-    width: 80px;
+    height: 95px;
+    width: 95px;
     margin: 10px;
   }
 }
 .miniPhoto {
-  border: 3px solid hsla(26, 100%, 55%, 0);
   border-radius: 12%;
   &:hover {
-    border: 3px solid hsla(26, 100%, 55%, 0);
     border-radius: 12%;
+    background-color: #aaa;
+    opacity: 0.5;
+    transition: 0.3s;
   }
 }
 // coté droit
@@ -290,9 +291,6 @@ div.lowPhoto {
 // ================================ slide =======================================//
 
 #monSlide {
-  //position: absolute;
-  //left: 600px;
-  //top: 100px;
   background-color: rgba(0, 0, 0, 0.666);
   z-index: 3;
   border-radius: 3%;
@@ -306,7 +304,7 @@ div.lowPhoto {
   display: none; /* Cache le modal par défaut */
   // position: fixed; /* Position fixe */
   position: relative;
-  top: -760px;
+  top: -900px;
   background-color: rgba(0, 0, 0, 0.9);
   height: 100vh;
   width: 100vw;
@@ -339,10 +337,25 @@ div.lowPhoto {
   cursor: pointer;
 }
 #ouvrirModal2 {
+  display: flex;
   border: none;
   padding: 0;
   background-color: #fff;
+  & > img {
+    width: 500px;
+    height: 500px;
+    border-radius: 3%;
+    margin-left: 200px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+  // position: relative;
 }
+.content-image {
+  overflow: hidden;
+  width: 700px;
+}
+
 // Intérieur du modal photo
 .carousel-inner {
   border-radius: 3%;

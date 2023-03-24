@@ -160,23 +160,24 @@ aside > button > img {
   margin-bottom: 20px;
 }
 
-div.lowPhoto {
-  margin-left: 192px;
+.lowPhoto {
+  margin-left: 207px;
 }
-div.lowPhoto img {
+.lowPhoto a img {
   border-radius: 12%;
-  height: 80px;
-  width: 80px;
+  height: 95px;
+  width: 95px;
   margin: 10px;
 }
 
 .miniPhoto {
-  border: 3px solid hsla(26, 100%, 55%, 0);
   border-radius: 12%;
 }
 .miniPhoto:hover {
-  border: 3px solid hsla(26, 100%, 55%, 0);
   border-radius: 12%;
+  background-color: #aaa;
+  opacity: 0.5;
+  transition: 0.3s;
 }
 
 .right {
@@ -322,7 +323,7 @@ div.lowPhoto img {
 .modal2 {
   display: none; /* Cache le modal par défaut */
   position: relative;
-  top: -760px;
+  top: -900px;
   background-color: rgba(0, 0, 0, 0.9);
   height: 100vh;
   width: 100vw;
@@ -356,9 +357,23 @@ div.lowPhoto img {
 }
 
 #ouvrirModal2 {
+  display: flex;
   border: none;
   padding: 0;
   background-color: #fff;
+}
+#ouvrirModal2 > img {
+  width: 500px;
+  height: 500px;
+  border-radius: 3%;
+  margin-left: 200px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.content-image {
+  overflow: hidden;
+  width: 700px;
 }
 
 .carousel-inner {

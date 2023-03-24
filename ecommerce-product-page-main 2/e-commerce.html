@@ -59,17 +59,26 @@
             <a href="./formPage.html"><button class="valid">Checkout</button></a>
         </div>
     </div>
+    <!-- Fin du modal du panier -->
+    <!-- Début galeries superposer -->
     <main>
         <aside>
-            <button id="ouvrirModal2" class="aside"><img src="./images/image-product-1.jpg" alt="shoes photo"
-                    class="photo1"></button>
+            <div class="content-image">
+                <button id="ouvrirModal2" class="aside">
+                    <img src="./images/image-product-1.jpg" alt="shoes photo" id="photo1">
+                    <img src="./images/image-product-2.jpg" alt="shoes photo" id="photo2">
+                    <img src="./images/image-product-3.jpg" alt="shoes photo" id="photo3">
+                    <img src="./images/image-product-4.jpg" alt="shoes photo" id="photo4"></button>
+            </div>
             <br>
             <div class="lowPhoto">
-                <img class="miniPhoto" src="./images/image-product-1-thumbnail.jpg" alt="shoes">
-                <img class="miniPhoto" src="./images/image-product-2-thumbnail.jpg" alt="shoes">
-                <img class="miniPhoto" src="./images/image-product-3-thumbnail.jpg" alt="shoes">
-                <img class="miniPhoto" src="./images/image-product-4-thumbnail.jpg" alt="shoes">
+                <a href="#photo1"><img class="miniPhoto" src="./images/image-product-1-thumbnail.jpg" alt="shoes"></a>
+                <a href="#photo2"><img class="miniPhoto" src="./images/image-product-2-thumbnail.jpg" alt="shoes"></a>
+                <a href="#photo3"><img class="miniPhoto" src="./images/image-product-3-thumbnail.jpg" alt="shoes"></a>
+                <a href="#photo4"><img class="miniPhoto" src="./images/image-product-4-thumbnail.jpg" alt="shoes"></a>
             </div>
+
+            <!-- Debut modal 2 -->
             <div id="monModal2" class="modal2">
                 <span class="fermerTwo">&times;</span>
                 <div class="modal2-contenu">
@@ -112,6 +121,7 @@
                 </div>
             </div>
         </aside>
+        <!-- Fin du coté gauche  -->
         <aside class="right">
             <p class="orange">sneakers compagny</p>
             <h2>Fall Limited Edition <br>Sneakers</h2>
