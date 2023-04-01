@@ -152,8 +152,8 @@ main {
 }
 
 aside > button > img {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   border-radius: 3%;
   margin-left: 200px;
   margin-top: 100px;
@@ -161,17 +161,14 @@ aside > button > img {
 }
 
 .lowPhoto {
-  margin-left: 207px;
-}
-.lowPhoto a img {
-  border-radius: 12%;
-  height: 95px;
-  width: 95px;
-  margin: 10px;
+  margin-left: 189px;
 }
 
 .miniPhoto {
   border-radius: 12%;
+  width: 115px;
+  height: 115px;
+  margin-left: 10px;
 }
 .miniPhoto:hover {
   border-radius: 12%;

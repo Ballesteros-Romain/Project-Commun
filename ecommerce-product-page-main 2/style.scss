@@ -145,24 +145,27 @@ main {
 }
 
 aside > button > img {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   border-radius: 3%;
   margin-left: 200px;
   margin-top: 100px;
   margin-bottom: 20px;
 }
 .lowPhoto {
-  margin-left: 207px;
-  & a img {
-    border-radius: 12%;
-    height: 95px;
-    width: 95px;
-    margin: 10px;
-  }
+  margin-left: 189px;
+  // & a img {
+  //   border-radius: 12%;
+  //   height: 40px;
+  //   width: 40px;
+  //   margin: 10px;
+  // }
 }
 .miniPhoto {
   border-radius: 12%;
+  width: 115px;
+  height: 115px;
+  margin-left: 10px;
   &:hover {
     border-radius: 12%;
     background-color: #aaa;
@@ -351,6 +354,7 @@ aside > button > img {
   }
   // position: relative;
 }
+
 .content-image {
   overflow: hidden;
   width: 700px;

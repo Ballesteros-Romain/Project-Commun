@@ -115,5 +115,13 @@ $(function () {
     textEmpty.style.display = "block";
   }
 
-  //------------------------------------------ page 2------------------------------------------------------------
+  //------------------------------------------ clic sur miniature ------------------------------------------------------------
+  const images = document.querySelectorAll(".miniPhoto");
+
+  images.forEach((image) => {
+    image.addEventListener("click", () => {
+      const src = image.getAttribute("src").replace("-thumbnail", "");
+      document.getElementById("photo1").setAttribute("src", src);
+    });
+  });
 });
