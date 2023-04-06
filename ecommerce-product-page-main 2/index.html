@@ -1,44 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Kumbh+Sans">
+    <title>Sneakers</title>
 </head>
+
 <body>
+    <header>
+        <h1>sneakers</h1>
+        <ul class="navbar">
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <button id="ouvrirModal" class="js-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-cart4 panier" viewBox="0 0 16 16">
+                <path
+                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+            </svg><span class="resultCart">0</span>
+        </button>
+        <!-- <p class="resultCart">0</p>-->
+        <img class="profil" src="../ecommerce-product-page-main 2/images/image-avatar.png" alt="photo de profil">
+    </header>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+    <!-- Bouton pour ouvrir le modal -->
 
-  Sneaker Company
 
-  Fall Limited Edition Sneakers
+    <!-- Modal -->
+    <div id="monModal" class="modal">
+        <div class="modal-contenu">
+            <span class="fermer">&times;</span>
+            <h2 class="titre">Cart</h2>
+            <p class="text">Your cart is empty</p>
+            <div id="modalContentFull">
+                <p><img src="./images/image-product-1-thumbnail.jpg" alt="photo shoes"></p>
+                <p class="textModalFull">Fail Limited Edition Sneakers<br>
+                    $ 125.00 <span class="resultCartModal">1</span><span class="sumElement"> </span>
+                </p>
+            </div>
+            <button id="emptyId" class="empty"><svg width="14" height="16" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                        <path
+                            d="M0 2.625V1.75C0 1.334.334 1 .75 1h3.5l.294-.584A.741.741 0 0 1 5.213 0h3.571a.75.75 0 0 1 .672.416L9.75 1h3.5c.416 0 .75.334.75.75v.875a.376.376 0 0 1-.375.375H.375A.376.376 0 0 1 0 2.625Zm13 1.75V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 14.5V4.375C1 4.169 1.169 4 1.375 4h11.25c.206 0 .375.169.375.375ZM4.5 6.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Z"
+                            id="a" />
+                    </defs>
+                    <use fill="#737070" fill-rule="nonzero" xlink:href="#a" />
+                </svg></button>
+            <a href="./formPage.html"><button class="valid">Checkout</button></a>
+        </div>
+    </div>
+    <!-- Fin du modal du panier -->
+    <!-- Début galeries superposer -->
+    <main>
+        <aside>
+            <div class="content-image">
+                <button id="ouvrirModal2" class="aside">
+                    <img src="./images/image-product-1.jpg" alt="shoes photo" id="photo1">
+                    <img src="./images/image-product-2.jpg" alt="shoes photo" id="photo2">
+                    <img src="./images/image-product-3.jpg" alt="shoes photo" id="photo3">
+                    <img src="./images/image-product-4.jpg" alt="shoes photo" id="photo4"></button>
+            </div>
+            <div class="lowPhoto">
+                <img class="miniPhoto" src="./images/image-product-1-thumbnail.jpg" alt="shoes">
+                <img class="miniPhoto" src="./images/image-product-2-thumbnail.jpg" alt="shoes">
+                <img class="miniPhoto" src="./images/image-product-3-thumbnail.jpg" alt="shoes">
+                <img class="miniPhoto" src="./images/image-product-4-thumbnail.jpg" alt="shoes">
+            </div>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+            <!-- Debut modal 2 -->
+            <div id="monModal2" class="modal2">
+                <span class="fermerTwo">&times;</span>
+                <div class="modal2-contenu">
+                    <div id="monSlide" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#monSlide" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#monSlide" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#monSlide" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#monSlide" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./images/image-product-1.jpg" class="d-block w-100" alt="shoes">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/image-product-2.jpg" class="d-block w-100" alt="shoes">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/image-product-3.jpg" class="d-block w-100" alt="shoes">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/image-product-4.jpg" class="d-block w-100" alt="shoes">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#monSlide"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#monSlide"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Fin du coté gauche  -->
+        <aside class="right">
+            <p class="orange">sneakers compagny</p>
+            <h2>Fall Limited Edition <br>Sneakers</h2>
+            <p>These low-profile sneakers are your perfect casual wear compagnon.
+                <br> a durable rubber outer sole, they'll withstand everything the weather can offer.
+            </p>
+            <p class="price">$ 125.00 <span class="reduction"> 50%</span></p>
+            <p class="fallPrice">$ 250.00</p>
+            <div class="addButton">
+                <p id="counter" class="add">1</p>
+                <button class="negatif" id="minus">-</button>
+                <button id="plus" class="positif">+</button>
+                <button id="add-to-cart"><svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                            fill="#FFFFFF" fill-rule="nonzero" />
+                    </svg>Add to cart</button>
+            </div>
+        </aside>
+    </main>
 
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <script src="./JQuery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <script src="script2.js"></script>
 </body>
+
 </html>
